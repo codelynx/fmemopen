@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC9512601D33C129005DEF68 /* fmemopen.h in Headers */ = {isa = PBXBuildFile; fileRef = CC95125F1D33C129005DEF68 /* fmemopen.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC9512681D33C20C005DEF68 /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = CC9512671D33C20C005DEF68 /* fmemopen.c */; };
+		CCA8230A1D33FE7700F41BD2 /* fmemopen_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA823091D33FE7700F41BD2 /* fmemopen_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCA8230F1D33FE8700F41BD2 /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = CC9512671D33C20C005DEF68 /* fmemopen.c */; };
+		CCA823181D33FEA700F41BD2 /* fmemopen_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA823171D33FEA700F41BD2 /* fmemopen_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCA8231D1D33FEB100F41BD2 /* fmemopen.c in Sources */ = {isa = PBXBuildFile; fileRef = CC9512671D33C20C005DEF68 /* fmemopen.c */; };
+		CCA8231E1D33FEC200F41BD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCA8230B1D33FE7700F41BD2 /* Info.plist */; };
+		CCA8231F1D33FEC500F41BD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCA823191D33FEA700F41BD2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC95125C1D33C129005DEF68 /* fmemopen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fmemopen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC95125F1D33C129005DEF68 /* fmemopen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmemopen.h; sourceTree = "<group>"; };
 		CC9512611D33C129005DEF68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9512671D33C20C005DEF68 /* fmemopen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fmemopen.c; sourceTree = "<group>"; };
+		CCA823071D33FE7700F41BD2 /* fmemopen_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fmemopen_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA823091D33FE7700F41BD2 /* fmemopen_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmemopen_ios.h; sourceTree = "<group>"; };
+		CCA8230B1D33FE7700F41BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA823151D33FEA700F41BD2 /* fmemopen_mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fmemopen_mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA823171D33FEA700F41BD2 /* fmemopen_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmemopen_mac.h; sourceTree = "<group>"; };
+		CCA823191D33FEA700F41BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC9512581D33C129005DEF68 /* Frameworks */ = {
+		CCA823031D33FE7700F41BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA823111D33FEA700F41BD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				CC95125E1D33C129005DEF68 /* fmemopen */,
+				CCA823081D33FE7700F41BD2 /* fmemopen_ios */,
+				CCA823161D33FEA700F41BD2 /* fmemopen_mac */,
 				CC95125D1D33C129005DEF68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +58,8 @@
 		CC95125D1D33C129005DEF68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC95125C1D33C129005DEF68 /* fmemopen.framework */,
+				CCA823071D33FE7700F41BD2 /* fmemopen_ios.framework */,
+				CCA823151D33FEA700F41BD2 /* fmemopen_mac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,36 +74,80 @@
 			path = fmemopen;
 			sourceTree = "<group>";
 		};
+		CCA823081D33FE7700F41BD2 /* fmemopen_ios */ = {
+			isa = PBXGroup;
+			children = (
+				CCA823091D33FE7700F41BD2 /* fmemopen_ios.h */,
+				CCA8230B1D33FE7700F41BD2 /* Info.plist */,
+			);
+			path = fmemopen_ios;
+			sourceTree = "<group>";
+		};
+		CCA823161D33FEA700F41BD2 /* fmemopen_mac */ = {
+			isa = PBXGroup;
+			children = (
+				CCA823171D33FEA700F41BD2 /* fmemopen_mac.h */,
+				CCA823191D33FEA700F41BD2 /* Info.plist */,
+			);
+			path = fmemopen_mac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CC9512591D33C129005DEF68 /* Headers */ = {
+		CCA823041D33FE7700F41BD2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9512601D33C129005DEF68 /* fmemopen.h in Headers */,
+				CCA8230A1D33FE7700F41BD2 /* fmemopen_ios.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA823121D33FEA700F41BD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA823181D33FEA700F41BD2 /* fmemopen_mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CC95125B1D33C129005DEF68 /* fmemopen */ = {
+		CCA823061D33FE7700F41BD2 /* fmemopen_ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC9512641D33C129005DEF68 /* Build configuration list for PBXNativeTarget "fmemopen" */;
+			buildConfigurationList = CCA8230E1D33FE7700F41BD2 /* Build configuration list for PBXNativeTarget "fmemopen_ios" */;
 			buildPhases = (
-				CC9512571D33C129005DEF68 /* Sources */,
-				CC9512581D33C129005DEF68 /* Frameworks */,
-				CC9512591D33C129005DEF68 /* Headers */,
-				CC95125A1D33C129005DEF68 /* Resources */,
+				CCA823021D33FE7700F41BD2 /* Sources */,
+				CCA823031D33FE7700F41BD2 /* Frameworks */,
+				CCA823041D33FE7700F41BD2 /* Headers */,
+				CCA823051D33FE7700F41BD2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = fmemopen;
-			productName = fmemopen;
-			productReference = CC95125C1D33C129005DEF68 /* fmemopen.framework */;
+			name = fmemopen_ios;
+			productName = fmemopen_ios;
+			productReference = CCA823071D33FE7700F41BD2 /* fmemopen_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCA823141D33FEA700F41BD2 /* fmemopen_mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA8231A1D33FEA700F41BD2 /* Build configuration list for PBXNativeTarget "fmemopen_mac" */;
+			buildPhases = (
+				CCA823101D33FEA700F41BD2 /* Sources */,
+				CCA823111D33FEA700F41BD2 /* Frameworks */,
+				CCA823121D33FEA700F41BD2 /* Headers */,
+				CCA823131D33FEA700F41BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fmemopen_mac;
+			productName = fmemopen_mac;
+			productReference = CCA823151D33FEA700F41BD2 /* fmemopen_mac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +159,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Electricwoods LLC";
 				TargetAttributes = {
-					CC95125B1D33C129005DEF68 = {
+					CCA823061D33FE7700F41BD2 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CCA823141D33FEA700F41BD2 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -113,27 +179,45 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC95125B1D33C129005DEF68 /* fmemopen */,
+				CCA823061D33FE7700F41BD2 /* fmemopen_ios */,
+				CCA823141D33FEA700F41BD2 /* fmemopen_mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC95125A1D33C129005DEF68 /* Resources */ = {
+		CCA823051D33FE7700F41BD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA8231E1D33FEC200F41BD2 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA823131D33FEA700F41BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8231F1D33FEC500F41BD2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC9512571D33C129005DEF68 /* Sources */ = {
+		CCA823021D33FE7700F41BD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9512681D33C20C005DEF68 /* fmemopen.c in Sources */,
+				CCA8230F1D33FE8700F41BD2 /* fmemopen.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA823101D33FEA700F41BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8231D1D33FEB100F41BD2 /* fmemopen.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,34 +315,76 @@
 			};
 			name = Release;
 		};
-		CC9512651D33C129005DEF68 /* Debug */ = {
+		CCA8230C1D33FE7700F41BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = fmemopen/Info.plist;
+				INFOPLIST_FILE = fmemopen_ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.fmemopen;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.fmemopen-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		CC9512661D33C129005DEF68 /* Release */ = {
+		CCA8230D1D33FE7700F41BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = fmemopen/Info.plist;
+				INFOPLIST_FILE = fmemopen_ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.electricwoods.fmemopen;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.fmemopen-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CCA8231B1D33FEA700F41BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = fmemopen_mac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.fmemopen-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CCA8231C1D33FEA700F41BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = fmemopen_mac/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.electricwoods.fmemopen-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -275,11 +401,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC9512641D33C129005DEF68 /* Build configuration list for PBXNativeTarget "fmemopen" */ = {
+		CCA8230E1D33FE7700F41BD2 /* Build configuration list for PBXNativeTarget "fmemopen_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC9512651D33C129005DEF68 /* Debug */,
-				CC9512661D33C129005DEF68 /* Release */,
+				CCA8230C1D33FE7700F41BD2 /* Debug */,
+				CCA8230D1D33FE7700F41BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCA8231A1D33FEA700F41BD2 /* Build configuration list for PBXNativeTarget "fmemopen_mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA8231B1D33FEA700F41BD2 /* Debug */,
+				CCA8231C1D33FEA700F41BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
